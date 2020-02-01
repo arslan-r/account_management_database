@@ -1,22 +1,3 @@
-/*****************************************************************
-//
-//  NAME:        Arslan Rakhmankulov
-//
-//  HOMEWORK:    Project 2
-//
-//  CLASS:       ICS 212
-//
-//  INSTRUCTOR:  Ravi Narayan
-//
-//  DATE:        April 12, 2019
-//
-//  FILE:        main.cpp
-//
-//  DESCRIPTION: main function for project 2
-//               big thank you to leetcode.com, geeksforgeeks.com, and cplusplus.com
-//
-//
-****************************************************************/
 
 #include <iostream>
 #include "llist.h"
