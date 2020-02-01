@@ -1,0 +1,304 @@
+Script started on Mon 15 Apr 2019 05:10:21 PM HST
+uhx02:/home/a/arslanr/Project1% ls
+proof.txt  [0m[01;34mSCCS[0m
+uhx02:/home/a/arslanr/Project1% d[Ksccs get -r1.3 getrelease.sh
+get: warning: SCCS/s.getrelease.sh: No id keywords.
+1.3
+1 lines
+uhx02:/home/a/arslanr/Project1% cat getrelease.sh
+sccs get dbfunctions.c dbfunctionsheaders.h homework3b.c -r1.1 record.h -r1.1 Makefile
+uhx02:/home/a/arslanr/Project1% sh getrelease.sh
+
+SCCS/s.dbfunctions.c:
+get: warning: SCCS/s.dbfunctions.c: No id keywords.
+1.1
+564 lines
+
+SCCS/s.dbfunctionsheaders.h:
+get: warning: SCCS/s.dbfunctionsheaders.h: No id keywords.
+1.1
+10 lines
+
+SCCS/s.homework3b.c:
+get: warning: SCCS/s.homework3b.c: No id keywords.
+1.1
+308 lines
+
+SCCS/s.record.h:
+get: warning: SCCS/s.record.h: No id keywords.
+1.1
+8 lines
+
+SCCS/s.Makefile:
+get: warning: SCCS/s.Makefile: No id keywords.
+1.1
+12 lines
+uhx02:/home/a/arslanr/Project1% ls
+dbfunctions.c         getrelease.sh  Makefile   record.h
+dbfunctionsheaders.h  homework3b.c   proof.txt  [0m[01;34mSCCS[0m
+uhx02:/home/a/arslanr/Project1% make
+gcc -ansi -pedantic-errors -Wall -c homework3b.c
+gcc -ansi -pedantic-errors -Wall -c dbfunctions.c
+[01m[Kdbfunctions.c:[m[K In function ‘[01m[KaddRecord[m[K’:
+[01m[Kdbfunctions.c:71:13:[m[K [01;31m[Kerror: [m[Kexpected expression before ‘[01m[K/[m[K’ token
+             //printf("\nRecord with the account number already exists!\n");
+[01;32m[K             ^[m[K
+[01m[Kdbfunctions.c:[m[K In function ‘[01m[Kreadfile[m[K’:
+[01m[Kdbfunctions.c:423:9:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 2 has type ‘[01m[Kchar *[m[K’ [-Wformat=]
+         printf("User entered the following file name: %d\n\n", fileName);
+[01;32m[K         ^[m[K
+[01m[Kdbfunctions.c:[m[K In function ‘[01m[Kwritefile[m[K’:
+[01m[Kdbfunctions.c:487:9:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 2 has type ‘[01m[Kchar *[m[K’ [-Wformat=]
+         printf("User entered the following file name: %d\n\n", fileName);
+[01;32m[K         ^[m[K
+make: *** [dbfunctions.o] Error 1
+uhx02:/home/a/arslanr/Project1% ls
+dbfunctions.c         getrelease.sh  homework3b.o  proof.txt  [0m[01;34mSCCS[0m
+dbfunctionsheaders.h  homework3b.c   Makefile      record.h
+uhx02:/home/a/arslanr/Project1% ls
+proof.txt  [0m[01;34mSCCS[0m
+uhx02:/home/a/arslanr/Project1% g[Ksccs get getrelease.sh
+get: warning: SCCS/s.getrelease.sh: No id keywords.
+1.7
+1 lines
+uhx02:/home/a/arslanr/Project1% ls
+getrelease.sh  proof.txt  [0m[01;34mSCCS[0m
+uhx02:/home/a/arslanr/Project1% ge[K[Kcat getrelease.sh
+sccs get llist.cpp llist.h main.cpp record.h Makefile
+uhx02:/home/a/arslanr/Project1% sh getrelease.sh
+
+SCCS/s.llist.cpp:
+get: warning: SCCS/s.llist.cpp: No id keywords.
+1.1
+700 lines
+
+SCCS/s.llist.h:
+get: warning: SCCS/s.llist.h: No id keywords.
+1.1
+15 lines
+
+SCCS/s.main.cpp:
+get: warning: SCCS/s.main.cpp: No id keywords.
+1.1
+226 lines
+
+SCCS/s.record.h:
+get: warning: SCCS/s.record.h: No id keywords.
+1.2
+12 lines
+
+SCCS/s.Makefile:
+get: warning: SCCS/s.Makefile: No id keywords.
+1.2
+9 lines
+uhx02:/home/a/arslanr/Project1% ls
+getrelease.sh  llist.cpp  llist.h  main.cpp  Makefile  proof.txt  record.h  [0m[01;34mSCCS[0m
+uhx02:/home/a/arslanr/Project1% make
+g++ -ansi -pedantic-errors -Wall -c main.cpp
+g++ -ansi -pedantic-errors -Wall -c llist.cpp
+g++ -o Project2 main.o llist.o
+uhx02:/home/a/arslanr/Project1% ls
+getrelease.sh  llist.h  main.cpp  Makefile  proof.txt  [0m[01;34mSCCS[0m
+llist.cpp      llist.o  main.o    [01;32mProject2[0m  record.h
+uhx02:/home/a/arslanr/Project1% ./Project2
+
+
+Chose an option by typing in its number
+1. Add a new record in the database
+2. Print information about a record using the account number as the key
+3. Print all information in the database
+4. Print records whose names start with the given string as a key
+5. Delete an existing record from the database using the account number as a key
+6. Reverse the list of records
+7. Quit the program
+1
+
+Enter your account number: 
+1111^H   
+User entered the number :111
+Enter your name :
+AAA
+Enter your address(es). Enter * when you are finished to submit: AAA*
+
+Record added!
+
+
+Chose an option by typing in its number
+1. Add a new record in the database
+2. Print information about a record using the account number as the key
+3. Print all information in the database
+4. Print records whose names start with the given string as a key
+5. Delete an existing record from the database using the account number as a key
+6. Reverse the list of records
+7. Quit the program
+2^H   1
+
+Enter your account number: 
+B^H   222
+User entered the number :222
+Enter your name :
+BBB
+Enter your address(es). Enter * when you are finished to submit: BBB*
+
+Record added!
+
+
+Chose an option by typing in its number
+1. Add a new record in the database
+2. Print information about a record using the account number as the key
+3. Print all information in the database
+4. Print records whose names start with the given string as a key
+5. Delete an existing record from the database using the account number as a key
+6. Reverse the list of records
+7. Quit the program
+3
+111
+AAA
+AAA
+222
+BBB
+BBB
+
+
+Chose an option by typing in its number
+1. Add a new record in the database
+2. Print information about a record using the account number as the key
+3. Print all information in the database
+4. Print records whose names start with the given string as a key
+5. Delete an existing record from the database using the account number as a key
+6. Reverse the list of records
+7. Quit the program
+2
+
+Enter your account number: 
+111
+User entered the number :111
+111
+AAA
+AAA
+
+
+Chose an option by typing in its number
+1. Add a new record in the database
+2. Print information about a record using the account number as the key
+3. Print all information in the database
+4. Print records whose names start with the given string as a key
+5. Delete an existing record from the database using the account number as a key
+6. Reverse the list of records
+7. Quit the program
+4
+Enter your name :
+BBB
+222
+BBB
+BBB
+
+
+Chose an option by typing in its number
+1. Add a new record in the database
+2. Print information about a record using the account number as the key
+3. Print all information in the database
+4. Print records whose names start with the given string as a key
+5. Delete an existing record from the database using the account number as a key
+6. Reverse the list of records
+7. Quit the program
+3
+111
+AAA
+AAA
+222
+BBB
+BBB
+
+
+Chose an option by typing in its number
+1. Add a new record in the database
+2. Print information about a record using the account number as the key
+3. Print all information in the database
+4. Print records whose names start with the given string as a key
+5. Delete an existing record from the database using the account number as a key
+6. Reverse the list of records
+7. Quit the program
+3
+111
+AAA
+AAA
+222
+BBB
+BBB
+
+
+Chose an option by typing in its number
+1. Add a new record in the database
+2. Print information about a record using the account number as the key
+3. Print all information in the database
+4. Print records whose names start with the given string as a key
+5. Delete an existing record from the database using the account number as a key
+6. Reverse the list of records
+7. Quit the program
+6
+
+
+Chose an option by typing in its number
+1. Add a new record in the database
+2. Print information about a record using the account number as the key
+3. Print all information in the database
+4. Print records whose names start with the given string as a key
+5. Delete an existing record from the database using the account number as a key
+6. Reverse the list of records
+7. Quit the program
+3
+222
+BBB
+BBB
+111
+AAA
+AAA
+
+
+Chose an option by typing in its number
+1. Add a new record in the database
+2. Print information about a record using the account number as the key
+3. Print all information in the database
+4. Print records whose names start with the given string as a key
+5. Delete an existing record from the database using the account number as a key
+6. Reverse the list of records
+7. Quit the program
+7^H   5
+
+Enter your account number: 
+222
+User entered the number :222
+
+Record 222 deleted!
+
+
+
+Chose an option by typing in its number
+1. Add a new record in the database
+2. Print information about a record using the account number as the key
+3. Print all information in the database
+4. Print records whose names start with the given string as a key
+5. Delete an existing record from the database using the account number as a key
+6. Reverse the list of records
+7. Quit the program
+3
+111
+AAA
+AAA
+
+
+Chose an option by typing in its number
+1. Add a new record in the database
+2. Print information about a record using the account number as the key
+3. Print all information in the database
+4. Print records whose names start with the given string as a key
+5. Delete an existing record from the database using the account number as a key
+6. Reverse the list of records
+7. Quit the program
+7
+Goodbye!
+uhx02:/home/a/arslanr/Project1% exit
+exit
+
+Script done on Mon 15 Apr 2019 05:13:37 PM HST
